@@ -1,0 +1,18 @@
+<h1>Artist: @Model["artist"].GetName()</h1>
+
+<ul>
+@if (@Model["albums"].Count == 0) 
+{
+    <h3>You have no Albums.</h3>
+
+}    
+@foreach(var album in @Model["albums"])
+{
+    
+    <li><a href='/artists/@Model["artist"].GetId()/albums/@album.GetId()'>@album.GetName()</a></li>
+}
+</ul>
+
+<p><a href='/artists/@Model["artist"].GetId()/albums/new'>Add a new album for this artist</a></p>
+<p><a href='/artists'>Return to Artist list</a></p>
+<p><a href='/'>Return to Main Page</a></p>

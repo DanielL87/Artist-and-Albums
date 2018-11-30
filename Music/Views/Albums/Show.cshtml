@@ -1,0 +1,8 @@
+<h1>Album Details</h1>
+
+<h3>Artist: @Model["artist"].GetName()</h3>
+<h2>@Model["album"].GetName()</h2>
+<h2>@Model["album"].GetYear()</h2>
+
+<a href='/artists/@Model["artist"].GetId()/albums/new'>Add another item</a>
+<a href='/artists'>View all Artist</a>

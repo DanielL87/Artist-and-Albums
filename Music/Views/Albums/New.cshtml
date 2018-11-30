@@ -1,0 +1,13 @@
+<h1>Please an Album Name and Year for This @Model.GetName()</h1>
+
+<form action="/artists/@Model.GetId()/albums" method="post">
+<input id='artistId' name='artistId' type='hidden' value='@Model.GetId()'>
+  <label for="albumName">Album name</label>
+  <input id="albumName" name="albumName" type="text">
+  <label for="albumYear">Album Year</label>
+  <input id="albumYear" name="albumYear" type="text">
+  <button type="submit">Add</button>
+</form>
+
+<p><a href="/">Back home</a></p>
+<p><a href="/artists">Back to Artists.</a></p>
